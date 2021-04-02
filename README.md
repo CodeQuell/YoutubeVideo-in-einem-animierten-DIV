@@ -9,3 +9,21 @@ Auf der Webseite ist ein \<div>-Element mit blauem Rand zu sehen. Darin erschein
   
 Sobald man mit der Maus auf das grau hinterlegte \<div>-Element fährt stoppt die Animation, bis die Maus die graue Fläche wieder verlässt.
 Wenn das Youtube-Video gestartet wird, stoppt die Animation solange bis die Video-Wiedergabe entweder pausiert oder beendet wird.
+
+## index.html
+Die index.html enthält den Platzhalter für den Youtube-Player: **\<div id="player">\</div>**
+Dieses \<div>-Element wird aus dem Javascript-Code in youtubeApi.js mit einem \<iframe>-Element ersetzt.
+
+## youtubeApi.js
+In youtubeApi.js wird zuerst die "Youtube Player API" asynchron geladen, anschliessend wird die **function onYouTubeIframeAPIReady()** gefeuert sobald die API bereit steht.
+Mit **new YT.Player('player'....** wird der Youtube Player erzeugt und **\<div id="player">\</div>** in index.html wird mit dem **\<iframe>-Element** das vom Player erzeugt wird, ersetzt.
+
+Die **function onPlayerStateChange()** wird jedes Mal ausgeführt wenn sich der Status vom Youtube-Player ändert. Wenn das Video gestartet wird oder wenn es pausiert wird zum Beispiel.
+
+Mögliche Stati vom Youtube-Player sind:
+* -1 – nicht gestartet
+* 0 – beendet
+* 1 – wird wiedergegeben
+* 2 – pausiert
+* 3 – wird gepuffert
+* 5 – Video positioniert
