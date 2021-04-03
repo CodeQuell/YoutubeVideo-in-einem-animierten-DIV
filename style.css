@@ -3,14 +3,10 @@
 }
 
 .cq_container {
-    height: 800px;
+    height: 400px;
     width: 320px;
     overflow: hidden;
     border: 1px solid blue;
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 100px;
 }
 
 .cq_scrollitem:hover {
