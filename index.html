@@ -8,14 +8,19 @@
   <body>
       
     <div class="cq_container">
-        <div class="cq_scrollitem" onclick="toggleAnimation()" onmouseover="stopAnimation()" onmouseout="toggleAnimation()">
+        <div class="cq_scrollitem"  onclick="toggleAnimation()" 
+                                    onmouseover="stopAnimation()" 
+                                    onmouseout="toggleAnimation()">
+            
             <div class="cq_videoWrapper">
                 <!--
                 Dieses <div>-tag wird durch das <iframe>-tag ersetzt. 
-                Die id="player" muss dem Namen vom Player entsprechen -> (youtubeApi.js, Funktion onYouTubeIframeAPIReady, player = new YT.Player('player',...)  
+                Die id="player" muss dem Namen vom Player entsprechen -> 
+                (youtubeApi.js, Funktion onYouTubeIframeAPIReady, player = new YT.Player('player',...)  
                 -->
                 <div id="player"></div>
             </div>
+            
         </div>
     </div>
 

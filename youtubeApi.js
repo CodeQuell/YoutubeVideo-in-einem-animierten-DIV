@@ -1,4 +1,3 @@
-
 // 1. Die IFrame Player API wird asynchron geladen.
 var tag = document.createElement('script');
 
@@ -10,7 +9,6 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    nachdem der API Code in Schritt 2 heruntergeladen wurde.
 var player;
 function onYouTubeIframeAPIReady() {
-    console.log("onYouTubeIframeAPIReady");
     player = new YT.Player('player', {
       height: '180',
       width: '320',
@@ -38,12 +36,9 @@ function onPlayerReady(event) {
 var done = false;
 var playerState;
 function onPlayerStateChange(event) {
-    console.log("onPlayerStateChange");
-
     //Den Status des Videos holen. 
     var state = player.getPlayerState();
     playerState = player.getPlayerState();
-    console.log("Player state " + state);
     
     if (state == 1)
     {
@@ -54,17 +49,9 @@ function onPlayerStateChange(event) {
         // Das Video ist pausiert oder beendet, die Animation starten
         startAnimation();
     }
-    
-
- /* 
-if (event.data == YT.PlayerState.PLAYING && !done) {
-  setTimeout(stopVideo, 6000);
-  done = true;
-}*/
 }
 
 function startAnimation(){
-    console.log("startAnimation");
     var style;
     for (var i = 0; i < cq_scrollitem.length; i++) {
         style = cq_scrollitem[i].style;
@@ -74,7 +61,6 @@ function startAnimation(){
 }
 
 function stopAnimation(){
-    console.log("stopAnimation");
     var style;
     for (var i = 0; i < cq_scrollitem.length; i++) {
         style = cq_scrollitem[i].style;
@@ -84,9 +70,8 @@ function stopAnimation(){
 }
 
 function toggleAnimation() {
-    console.log("toggleAnimation "+ playerState);
     // Toggelt die Animation -> stoppt oder startet die Animation
-    //Wenn das Video läuft playerState 1, kann die Animation nicht gestartet werden
+    // Wenn das Video läuft playerState 1, kann die Animation nicht gestartet werden
     if(playerState != 1){
         var style;
         for (var i = 0; i < cq_scrollitem.length; i++) {
@@ -102,11 +87,9 @@ function toggleAnimation() {
             }
         }
     }
-    
 }
 
 function stopVideo() {
-    console.log("stopVideo");
     player.stopVideo();
 } 
 
