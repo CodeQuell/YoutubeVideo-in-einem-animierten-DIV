@@ -27,3 +27,6 @@ Mögliche Stati vom Youtube-Player sind:
 * 2 – pausiert
 * 3 – wird gepuffert
 * 5 – Video positioniert
+
+## style.css
+In style.css ist das Aussehen der verwendeten Html-Elemente definiert, sowie die Animation des grau hinterlegten div-Elements.
