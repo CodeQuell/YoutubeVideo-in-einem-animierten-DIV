@@ -93,13 +93,12 @@ function stopVideo() {
     player.stopVideo();
 } 
 
-// cq_scrollitem muss ausserhalb vom Event window.onload zur Verfügung stehen, damit 
-// das toggeln der Animation mit toggleAnimation() klappt
+// cq_scrollitem muss ausserhalb vom Event window.onload zur Verfügung stehen, 
+// damit das toggeln der Animation mit toggleAnimation() klappt
 cq_scrollitem = {};
 
 // Nach dem Laden der Seite
 window.onload = function(e){ 
     // Alle Elemente mit der Klasse "cq_scrollitem" holen und im Array cq_scrollitem ablegen
     cq_scrollitem = document.querySelectorAll('.cq_scrollitem');
-    console.log("cq_scrollitem " + cq_scrollitem.length);
 }
